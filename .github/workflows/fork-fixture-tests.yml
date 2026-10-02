@@ -29,7 +29,7 @@ jobs:
       - name: Install locked dependencies
         run: bun install --frozen-lockfile
       - name: Run synthetic and native fixture tests
-        run: bun test --timeout 30000 test/embedding-progress.test.ts test/index.test.ts test/walker.test.ts test/query.test.ts test/rank.test.ts
+        run: bun test --timeout 30000 test/embedding-progress.test.ts test/chunk-key-integrity.test.ts test/index.test.ts test/walker.test.ts test/query.test.ts test/rank.test.ts
       - name: Build declared Node distribution
         run: bun run build
       - name: Check Node CLI help without selecting a command
