@@ -210,6 +210,12 @@ ripgrep matches thousands of files on common keywords. codemogger returns the 5 
 - **Turso** for storage - embedded SQLite with FTS + vector search extensions
 - **Single DB file** stores multiple codebases with per-codebase FTS tables and global vector search
 
+## Development and source boundaries
+
+Codemogger is a headless indexing/search library with a [CLI](bin/codemogger.ts), [CodeIndex SDK](src/index.ts), and [stdio MCP surface](src/mcp.ts). It does not contain a frontend application. The [source overview](docs/source-overview.mdx) describes the architecture and operating boundaries.
+
+The declared build uses Bun during development and targets Node for the distributed CLI. The SDK uses the declared Turso store and Node-compatible APIs. At this revision, the CLI literal version (`0.2.0`) differs from package metadata (`0.1.5`). Generic frontend examples in `CLAUDE.md` are not an application entrypoint.
+
 ## License
 
 MIT
