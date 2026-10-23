@@ -83,3 +83,6 @@ ripgrep/
 continue/
 opencode/
 skills/
+
+# Local worktrees (JCK-2026)
+.worktrees/
